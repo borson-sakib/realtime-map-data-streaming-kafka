@@ -25,5 +25,6 @@ def forms(request):
     return render(request, 'form.html')
 
 def resume(request):
-    
-    return render(request, 'index.html')
+    response=requests.get('https://api.github.com/users/borson-sakib/repos').json()
+
+    return render(request, 'index.html',{'response':response})
