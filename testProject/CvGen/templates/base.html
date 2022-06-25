@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      ol {
+        background: #e0650d;
+        padding: 20px;
+      }
+
+      ul {
+        background: #3399ff;
+        padding: 20px;
+      }
+
+      ol li {
+        background: #fffefc;
+        color: darkred;
+        padding: 5px;
+        margin-left: 35px;
+      }
+
+      ul li {
+        background: #cce5ff;
+        color: darkblue;
+        margin: 5px;
+      }
+      p.a {
+  font-family: "Courier New", monospace;
+}
+    </style>
+    <title>API Display</title>
+  </head>
+  <body>
+    <h1>List of Repositories</h1>
+    <p>Username - {{username}}</p>
+
+    <ol>
+      {% for i in response %}
+      <li>
+        <strong>{{i.name}} </strong>
+        </br>
+        <p class="a"> Description - {{i.description}} </p>
+        </br>
+        <a href="{{i.html_url}}">{{i.html_url}}</a>
+      </li>
+      <br />
+      {% endfor %}
+    </ol>
+  </body>
+</html>

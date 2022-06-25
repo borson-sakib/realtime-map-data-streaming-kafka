@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Enter Username</title>
+  </head>
+
+  <form action="/home/" method="post">
+    {% csrf_token %}
+    <label for="user_git">Enter Your Github Username: </label>
+    <input id="user_git" type="text" name="user_git" />
+    <input type="submit" value="Submit" />
+  </form>
+</html>
