@@ -102,7 +102,6 @@ from kafka.admin import KafkaAdminClient, NewTopic
 
 def delete_message(request):
     try:
-        # # Set up Kafka client
         # client = KafkaClient(hosts="localhost:9092")
 
         # # Set up topic object
