@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Homepage</title>
+  </head>
+  <body>
+    <h1>Welcome to my homepage!</h1>
+    <p>This is a minimal HTML homepage.</p>
+
+    <form method="POST" action="{% url 'data_pass' %}">
+      {% csrf_token %}
+      <input type="text" name="my_data" id="my_data" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
